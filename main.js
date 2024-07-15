@@ -79,7 +79,7 @@ ipcMain.handle('run-code', async (event, code) => {
       `;
   
       vm.createContext(context);
-      await vm.runInContext(wrappedCode, context, { timeout: 15000 }); // Aumentamos el timeout a 15 segundos
+      await vm.runInContext(wrappedCode, context, { timeout: 15000 }); 
       return { success: true, logs: logs };
     } catch (error) {
       return { success: false, error: error.message };
