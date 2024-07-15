@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITjs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+    <style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #282a36;
+        color: #f8f8f2;
+    }
+    .container {
+        display: flex;
+        height: 100%;
+    }
+    .editor {
+        flex: 1;
+        border-right: 1px solid #44475a;
+    }
+    .output {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        background-color: #282a36;
+    }
+    .output pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: monospace;
+        }
+    #run-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        background-color: #50fa7b;
+        color: #282a36;
+        border: none;
+        cursor: pointer;
+    }
+    #run-button:hover {
+        background-color: #5af78e;
+    }
+    .CodeMirror {
+        height: 100% !important;
+    }
+</style>
+  
+</head>
+<body>
+    <div class="container">
+        <div class="editor" id="editor"></div>
+        <div class="output" id="output"></div>
+    </div>
+    <button id="run-button">RUN</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>
